@@ -9,6 +9,17 @@ defmodule Logger.Syslog.Utils do
     |> to_string
   end
 
+  def facility(:user)       do:  ( 1 <<< 3)
+  def facility(:mail)       do:  ( 2 <<< 3)
+  def facility(:daemon)     do:  ( 3 <<< 3)
+  def facility(:auth)       do:  ( 4 <<< 3)
+  def facility(:syslog)     do:  ( 5 <<< 3)
+  def facility(:lpr)        do:  ( 6 <<< 3)
+  def facility(:news)       do:  ( 7 <<< 3)
+  def facility(:uucp)       do:  ( 8 <<< 3)
+  def facility(:authpriv)   do:  (10 <<< 3)
+  def facility(:ftp),       do:  (11 <<< 3)
+  def facility(:cron),      do:  (15 <<< 3)
   def facility(:local0),    do:  (16 <<< 3)
   def facility(:local1),    do:  (17 <<< 3)
   def facility(:local2),    do:  (18 <<< 3)
